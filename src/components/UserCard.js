@@ -2,7 +2,10 @@ import React from 'react'
 
 function UserCard({title, value}) {
   return (
-    <div>UserCard</div>
+    <div className='user-card'>
+      <h3 className='user-card-title'>{title}: </h3>
+      <span className='user-card-para'>{value}</span>
+    </div>
   )
 }
 
