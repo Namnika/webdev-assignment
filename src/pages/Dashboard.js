@@ -26,7 +26,7 @@ function Dashboard() {
     
 
     return (
-        <div className='d-flex flex-column mb-3'>
+        <div className='d-flex flex-column '>
             <div className="flex-grow-1 ">
                 <Navbar avatar={avatar}/>
             </div>
@@ -49,7 +49,7 @@ function Dashboard() {
                             <SignupChart totalUsers={totalUsers}/>
                         </ChartCard>
                         <ChartCard title="Recently Joined Users">
-                            <RecentlyJoinedChart />
+                            <RecentlyJoinedChart totalUsers={totalUsers}/>
                         </ChartCard>
 
                     
