@@ -46,7 +46,7 @@ function Dashboard() {
                         </ChartCard>
                     </div>
                         <ChartCard title="Most Active Signup today">
-                            <SignupChart />
+                            <SignupChart totalUsers={totalUsers}/>
                         </ChartCard>
                         <ChartCard title="Recently Joined Users">
                             <RecentlyJoinedChart />
