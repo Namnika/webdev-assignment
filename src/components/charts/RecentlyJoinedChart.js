@@ -2,7 +2,8 @@ import React from 'react'
 
 function RecentlyJoinedChart({ totalUsers }) {
 
-  const recentlyJoined = totalUsers.sort((b, a) => b - a).slice(0, 5)
+  const recentlyJoined = totalUsers.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 5)
+
 
   return (
     <div className='mx-3 my-3'>
@@ -15,6 +16,7 @@ function RecentlyJoinedChart({ totalUsers }) {
             <th scope='col'>GENDER</th>
             <th scope='col'>LOCATION</th>
             <th scope='col'>AGE</th>
+            <th scope='col'>JOINED DATE</th>
           </tr>
         </thead>
 
@@ -33,6 +35,9 @@ function RecentlyJoinedChart({ totalUsers }) {
               </td>
               <td>
                 {u.age}
+              </td>
+              <td>
+                {new Date(u.createdAt).toLocaleDateString()}
               </td>
             </tr>
           ))}
