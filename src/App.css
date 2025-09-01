@@ -46,7 +46,7 @@ code {
   font-size: 1.9rem;
   line-height: calc(2 / 1.5);
   font-weight: 600;
-  color: #6b7280
+  color: #6b7280;
 }
 
 .navbar {
@@ -71,12 +71,12 @@ code {
   justify-content: center;
 }
 
-img.user-avatar{
+img.user-avatar {
   outline-width: 2px;
   outline-color: #06b6d4;
   outline-offset: 4px;
   outline-style: solid;
-} 
+}
 
 .chart-card {
   background: whitesmoke;
@@ -88,13 +88,25 @@ img.user-avatar{
   transition-duration: 150ms;
 }
 
-.chart-card:hover{
+.chart-card:hover {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-.chart-card-title{
+.chart-card-title {
   font-size: 1.125rem;
   line-height: calc(1.75 / 1.125);
   font-weight: 600;
   color: #1f2937;
+}
+
+.users-table {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  text-align: start;
+}
+
+.table th,
+tr {
+  padding: 1rem;
 }

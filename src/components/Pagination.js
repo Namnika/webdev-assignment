@@ -1,26 +1,30 @@
 import React from 'react'
 
-function Pagination() {
+function Pagination({ onPageChange, currentPage, totalPages }) {
   return (
-    <div>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
+    <nav aria-label="Page navigation example">
+      <ul className="pagination">
+        <li className={`page-item ${currentPage === 1 ? "disabled" : ""} `}>
+          <button className="page-link" href="#" onClick={() => currentPage > 1 && onPageChange(currentPage - 1)} aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </button>
+        </li>
+
+        {Array.from({ length: totalPages }, (_, page) => (
+          <li key={page} className={`page-item ${currentPage === page + 1 ? "active" : ""}`}>
+            <button className="page-link" onClick={() => onPageChange(page + 1)} href="#">
+              {page + 1}
+            </button>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+        ))}
+
+        <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
+          <button className="page-link" href="#" onClick={() => currentPage < totalPages && onPageChange(currentPage + 1)} aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
   )
 }
 

@@ -24,11 +24,8 @@ function App() {
 
   return (
     <Router>
-    <div className="flex-grow-1 ">
-                    <Navbar avatar={avatar} />
-                </div>
+      <Navbar avatar={avatar} />
       <Routes>
-       
         <Route path='/' index element={<Dashboard totalUsers={totalUsers} />} />
         <Route path='/users' element={<Users totalUsers={totalUsers} />} />
       </Routes>
