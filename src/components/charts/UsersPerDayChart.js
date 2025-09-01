@@ -17,7 +17,7 @@ function UsersPerDayChart({ totalUsers }) {
 	}
 	)
 
-	const getUsersPerDay = Object.entries(countObj).map(([date, count]) => ({ date, count })).sort((a, b) => a - b)
+	const getUsersPerDay = Object.entries(countObj).map(([date, count]) => ({ date, count })).sort((a, b) => new Date(a.date) - new Date(b.date))
 
 
 	return (
@@ -29,7 +29,6 @@ function UsersPerDayChart({ totalUsers }) {
 				bottom: 5
 			}}>
 				<CartesianGrid strokeDasharray="3 3" />
-				{/* datakey=created date */}
 				<XAxis dataKey="date" />
 				<YAxis />
 				<Tooltip />
