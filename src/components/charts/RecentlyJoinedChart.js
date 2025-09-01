@@ -7,6 +7,7 @@ function RecentlyJoinedChart({ totalUsers }) {
 
   return (
     <div className='mx-3 my-3'>
+      <h2 className='chart-card-title'>Recently Joined Users</h2>
       <div className='fs-6 text-secondary text-start  fw-semibold'><p>Here are Top 5 newest users joined</p></div>
       <table className='table table-striped table-secondary'>
         <thead>

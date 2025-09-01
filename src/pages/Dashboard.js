@@ -27,9 +27,7 @@ function Dashboard({ totalUsers }) {
                     <ChartCard title="Most Active Signup today">
                         <SignupChart totalUsers={totalUsers} />
                     </ChartCard>
-                    <ChartCard title="Recently Joined Users">
                         <RecentlyJoinedChart totalUsers={totalUsers} />
-                    </ChartCard>
                 </div>
             </div>
         </div>
