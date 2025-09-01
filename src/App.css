@@ -110,3 +110,30 @@ img.user-avatar {
 tr {
   padding: 1rem;
 }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 5;
+}
+
+.user-modal {
+  background: #f5f7fa;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  width: min(90vw, 480px);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #1f2937;
+  font-weight: 500;
+}
