@@ -36,13 +36,15 @@ function Dashboard() {
             <div className='container text-center gap-3'>
                 <div className='row'>
                     <div className='col'>
-                        {/* chartCard wrap each chart */}
                         <ChartCard title="Users created per day (Last 30 days)">
-                            <UsersPerDayChart />
+                            <UsersPerDayChart totalUsers={totalUsers}/>
                         </ChartCard>
+                    </div>
+                    <div className='col'>
                         <ChartCard title="Avatar Distribution">
                             <AvatarChart />
                         </ChartCard>
+                    </div>
                         <ChartCard title="Most Active Signup today">
                             <SignupChart />
                         </ChartCard>
@@ -50,7 +52,7 @@ function Dashboard() {
                             <RecentlyJoinedChart />
                         </ChartCard>
 
-                    </div>
+                    
                 </div>
             </div>
         </div>
