@@ -42,7 +42,7 @@ function Dashboard() {
                     </div>
                     <div className='col'>
                         <ChartCard title="Avatar Distribution">
-                            <AvatarChart />
+                            <AvatarChart totalUsers={totalUsers}/>
                         </ChartCard>
                     </div>
                         <ChartCard title="Most Active Signup today">
