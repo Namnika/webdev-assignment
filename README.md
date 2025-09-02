@@ -1,6 +1,6 @@
 # Users Dashboard (Web Assignment)
 
-I develpment a users dashboard as an assignment user's data is shown using [recharts](https://recharts.org/en-US), with the help of extracted users information with data fetched using Backend API, and associated with Zymr.
+I developed a user dashboard as an assignment in which user's data is shown using [recharts](https://recharts.org/en-US), with data fetched using Backend API, and it is associated with Zymr.
 
 ## Available Scripts
 
